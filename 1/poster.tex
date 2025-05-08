@@ -1,0 +1,183 @@
+\documentclass{sciposter}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{textcomp} % for registred symbol
+\usepackage[linesnumbered,algoruled,longend]{algorithm2e}
+
+\newcommand{\midsepremove}{\aboverulesep = 0mm \belowrulesep = 0mm}
+\midsepremove
+\newcommand{\midsepdefault}{\aboverulesep = 0.605mm \belowrulesep = 0.984mm}
+\midsepdefault
+
+% titulo do trabalho
+\title{Lorem Ipsum}
+
+% nome dos autores
+\author{Charlinhos, F., Chagas, P.}
+
+% nome e endereço da Instituição
+\institute 
+{Programa de Pós-Graduação em Computação Aplicada - CAP\\
+    Instituto Nacional de Pesquisas Espaciais - INPE \\
+    Avenida dos Astronautas, 1758 - Jardim da Granja \\
+    São José dos Campos - SP, Brasil - CEP 12227-010}
+
+% e-mail dos autores (em ordem)
+\email{{charlinhos, p1g}{(@inpe.br})}
+
+% exibe os logos (esquerda e direita) 
+\leftlogo[1.35]{img/WorCap-2019.jpg}
+\rightlogo[0.7]{img/logo_inpe.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+
+\begin{document}
+
+
+\conference{{\bf WorCAP XXXX}, Workshop de Computação Aplicada - INPE, XXXX de Agosto de XXXX, São José dos Campos, Brasil}
+
+\maketitle
+
+\newcommand{\mycaption}{%
+\ifx \@captype \@undefined \@latex@error {\noexpand \caption outside float}\@ehd \expandafter \@gobble \else \refstepcounter \@captype \expandafter \@firstofone \fi {\@dblarg {\@caption \@captype }}%
+}%
+
+%%% Begin of Multicols-Enviroment
+\begin{multicols}{3}
+
+%%% Abstract
+% \begin{abstract}
+% Abstract.
+% \end{abstract}
+
+%%% Introduction
+\section{Introdução}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum nec ante in imperdiet. Curabitur leo nisl, elementum quis auctor vitae, malesuada nec lorem. Nam quis tincidunt est, et cursus ligula. Praesent ornare, mi in accumsan dapibus, ex enim placerat metus, sed placerat nulla metus quis dui. Maecenas eu diam neque. Suspendisse eget erat lectus. Proin eros lorem, gravida at sapien ut, luctus commodo neque. Aliquam erat volutpat. Maecenas mollis varius leo non auctor. Integer commodo condimentum ante sit amet volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus tempus risus a hendrerit lacinia.
+
+Donec bibendum ornare orci, non euismod lectus pulvinar ut. Maecenas non aliquet est. Curabitur vehicula posuere augue, at congue erat eleifend vitae. Pellentesque lobortis velit metus, dignissim aliquet ipsum fermentum ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus maximus tellus vitae gravida. Curabitur quis condimentum mauris. Suspendisse ornare consectetur massa, sed pharetra neque fermentum in. Vivamus efficitur placerat elit, quis consequat odio fermentum id. Etiam lobortis pulvinar nunc, tincidunt mollis nibh sollicitudin eget. Nunc placerat et mauris ac blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque non dictum mi. Donec eget justo mauris. Quisque eleifend nunc vel massa convallis, nec cursus risus tincidunt.
+
+Suspendisse non feugiat est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse mollis faucibus faucibus. Curabitur imperdiet tempus vehicula. Nunc eu sem eget metus iaculis lacinia et ut nisi. Etiam dignissim, libero laoreet tincidunt interdum, justo urna viverra dui, eu suscipit turpis orci sit amet tellus. Phasellus vehicula, magna sed vehicula laoreet, libero nisl lacinia tortor, quis feugiat magna quam quis magna. Integer a rhoncus lectus. Donec imperdiet sed sapien non sodales. Morbi fringilla massa feugiat arcu rutrum, nec tincidunt velit aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis augue ut lorem mollis finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\section{Referencial teórico}
+
+Etiam non rutrum libero. Morbi ut fermentum massa, quis vestibulum ligula. Integer commodo neque ligula, ut vulputate sapien rhoncus sit amet. Aliquam efficitur odio velit, a lacinia urna accumsan vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent consequat dui nec quam pharetra feugiat non vel ex. Vivamus eget erat est. Ut rutrum id nisi ac posuere.
+
+Sed semper, enim in volutpat dictum, purus arcu gravida dui, sit amet cursus justo lorem sed eros. Sed hendrerit neque fringilla mattis sodales. Quisque non vestibulum erat. Ut vitae urna consectetur, tincidunt elit ut, pellentesque velit. Praesent cursus, diam vitae varius viverra, dui lacus suscipit purus, in interdum urna massa vitae ex. Proin ultricies arcu vel dolor auctor fermentum. Nunc id ultricies nulla, in rutrum justo. Vestibulum sed porttitor nisi, nec scelerisque nulla. Sed a mi finibus, fermentum arcu vel, commodo ante. In elementum at magna sit amet vehicula. Suspendisse id leo sed mi auctor consectetur. Sed sodales urna leo, at posuere ipsum lacinia id. Suspendisse lobortis tempor purus non eleifend.
+
+    Lorem Ipsum $G = (V,E)$
+    
+  \begin{equation}
+  \label{eq:lip_cc_of}
+   K_{ce}(G, \mathcal{C}) = \sum\limits_{i < j, \ (i,j) \in E} x_{ij} +
+      \sum\limits_{i < j, \ (i,j) \notin E} (1 - x_{ij}),
+  \end{equation}
+  \[
+    x_{ij} = 
+    \begin{cases}
+            0, & \text{if } \ell_C(i) \cap \ell_C(j) \neq \emptyset,\\
+            1, & \text{if } \ell_C(i) \cap \ell_C(j) = \emptyset.
+    \end{cases}
+  \]
+
+\section{Cumulus Nimbus}
+
+Aliquam erat volutpat. In vel eros nibh. Morbi finibus, nisi non aliquam volutpat, sapien sem feugiat arcu, eget efficitur tortor tellus non tellus. Donec et pharetra massa. Nullam elementum, augue in rutrum vehicula, turpis augue eleifend dui, sed scelerisque enim elit in eros. Maecenas venenatis elementum magna, condimentum finibus purus gravida sit amet. In venenatis tempus risus, eget lobortis sem fringilla eget. Etiam ut lorem aliquet, placerat risus vel, cursus justo. Donec non eros nec arcu ultrices dictum. Etiam non leo tincidunt, vulputate ipsum semper, ultricies mi.
+
+Pellentesque vestibulum vulputate porta. Maecenas sodales, massa non pharetra auctor, ex nisi bibendum quam, id dapibus leo ipsum vitae massa. Donec eleifend facilisis enim, euismod fermentum quam eleifend et. Sed egestas justo eget tempus lacinia. Mauris lorem ex, tincidunt a lorem elementum, lobortis dictum augue. Donec quis massa sit amet ipsum sollicitudin suscipit in ut elit. Aenean at volutpat velit, eget cursus felis. Praesent mi lacus, rutrum ac venenatis eu, ornare nec ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum fermentum lacinia volutpat.
+
+\begin{subequations}\allowdisplaybreaks
+  \label{eq:model1}
+  \begin{align}
+    \max & \sum\limits_{i = 1}^N (d_i \cdot y_i - u_i) \label{eq:ocm1:of}\\
+    \text{sujeito a} & \nonumber \\
+    & \sum\limits_{j = 1}^N \Big|\frac{|C_i \cap C_j|}{|C_i \cup C_j|} -
+      z_i\Big| \cdot (y_i + y_j - 1) \leq u_i, \ i = 1, \dots, N,
+      \label{eq:ocm1:cons1} \\
+    & \sum\limits_{i = 1}^N y_i = r, \label{eq:ocm1:cons2} \\
+    & \sum\limits_{i = 1}^N a_{ji} \cdot y_i \geq b, \ j = 1, \dots,
+      n, \label{eq:ocm1:cons3} \\
+    & y_i \in \{0, 1\}, u_i \in \mathbb{R}, \ i = 1, \dots, N.
+      \label{eq:ocm1:cons4}
+  \end{align}
+\end{subequations}
+
+    Lorem Ipsum \ref{eq:model1}
+
+    \begin{equation}
+    \label{eq:clst_goodness}
+    d_i = \frac{E_{C_i}^{in}}{E_{C_i}^{\max}} -
+        \frac{E_{C_i}^{out}}{|C_i| \cdot (|V| - |C_i|)}.
+    \end{equation}
+
+\begin{algorithm}[H]
+    \mycaption{Lorem Ipsum.}
+    \label{alg:matheuristic}
+    \SetKwInOut{Input}{input}
+    \SetKwInOut{Output}{output}
+    \Input{graph $G = (V,E)$; mixed-integer liner program $model$; BRKGA number 
+        of generations $gen_{\max}$; BRKGA population size $p$; BRKGA elite 
+        population size $p_e$; BRKGA mutant population size $p_m$; BRKGA elite 
+        allele inheritance probability $\rho_e$; SA initial temperature $t_i$; 
+        SA final temperature $t_f$; SA cooling rate $\alpha$; SA Metropolis 
+        algorithm step size $sa_{\max}$.
+    }
+    \Output{overlapping cluster editing solution $s$;}
+    \Begin
+    {
+    $hist_{sol} \gets brkga(G, gen_{\max}, p, p_e, p_m, \rho_e)$;\\
+        \label{alg:math:row:brkga}
+    $hist_{sol} \gets hist_{sol} \cup sa(G, t_i, t_f, \alpha, sa_{\max})$;\\
+        \label{alg:math:row:sa}
+    $clusters \gets get\_clusters(hist_{sol})$\label{alg:math:row:getc};\\
+    $s \gets cplex\_solve(G, model, clusters)$\label{alg:math:row:cplex};\\
+    $s.compute\_ovlp\_clstring\_cost()$\label{alg:math:row:cost};\\
+    \Return{$s$}\; 
+    }
+\end{algorithm}
+
+\section{Resultados}
+
+Maecenas tempor dui ac tellus blandit efficitur. Phasellus a leo sit amet dui maximus tincidunt vel eu ipsum. Integer turpis dolor, lobortis ut interdum vel, iaculis et massa. Ut risus ligula, pretium feugiat quam interdum, mollis molestie lectus. Nullam leo ipsum, eleifend in rhoncus congue, eleifend quis est. Fusce consectetur iaculis lacinia. Suspendisse non tortor et orci blandit volutpat maximus non lacus. Morbi ligula libero, rutrum sed dictum non, molestie faucibus tortor. Nullam arcu magna, auctor ut lacus et, fermentum pulvinar massa. Duis id semper tortor, eu scelerisque massa. Pellentesque placerat augue sit amet justo mollis bibendum. Vivamus fringilla feugiat felis at egestas. Aenean erat quam, volutpat ut dolor vitae, porta auctor arcu. Maecenas nec libero et felis gravida sagittis vitae ac nisl.
+
+Curabitur id enim feugiat, faucibus libero in, consequat lorem. Proin malesuada mattis tortor non feugiat. Curabitur sollicitudin tincidunt nisl ut bibendum. Ut sit amet dolor tempor, faucibus nulla ut, tempor ex. Mauris eget nibh ut velit posuere sollicitudin. Phasellus ac consectetur velit. Quisque sed cursus risus.
+
+Praesent iaculis felis non lacus sagittis efficitur. Sed fringilla dui a lacus dapibus, ut molestie nisi luctus. In hac habitasse platea dictumst. In dapibus in nisi sed eleifend. Mauris ac diam eleifend nunc tempus aliquam. Duis ut orci tincidunt, egestas dolor vel, placerat nisi. Proin suscipit lobortis velit. Nulla volutpat ac nulla sed placerat. Pellentesque ac purus eget leo condimentum viverra. Donec tincidunt libero et arcu pharetra, id faucibus velit mollis. Praesent eget pharetra lectus, at tristique ante. Integer sodales odio nec tellus tincidunt facilisis. Sed et sem vel lacus imperdiet consectetur. Cras sodales cursus nisi et posuere. Nullam mi neque, convallis eget hendrerit in, sagittis vitae ligula. Proin et erat risus.
+
+Donec maximus sit amet lorem at interdum. Nunc semper risus at libero tincidunt malesuada ut sit amet odio. Sed sit amet sollicitudin ex. Integer et urna venenatis, maximus erat at, fringilla justo. Integer a erat eget mi congue lobortis. Nunc elit magna, ullamcorper ut tempor eu, finibus sed libero. Cras ac dolor a ligula tincidunt elementum id a libero. Integer consequat rhoncus ante, sed scelerisque odio. Donec non porta sapien. Aliquam sit amet suscipit purus. Curabitur ornare neque ac eleifend dignissim. Suspendisse id arcu fringilla, mollis ipsum eget, elementum odio. Donec fringilla sit amet nisl quis cursus. Aliquam elit lacus, porta sed interdum nec, porttitor non purus. Maecenas elementum fermentum orci. Curabitur vitae rhoncus justo, non aliquam dolor.
+
+Integer ac leo massa. Ut vitae velit sapien. Nunc non mi sed est molestie suscipit. Praesent pulvinar at tortor eu tempor. Etiam scelerisque vitae nisi vitae rhoncus. Pellentesque molestie leo massa, non ultrices lacus accumsan id. Praesent sit amet sem sem. Duis lacinia odio vitae vestibulum volutpat. Ut venenatis, sapien sit amet imperdiet lacinia, augue ex sagittis velit, vitae imperdiet sapien ipsum ut magna. Etiam ac rhoncus felis.
+
+Donec sit amet lacus elit. Aenean faucibus pharetra sapien, vitae finibus tellus suscipit et. Sed eget fringilla odio, eu sollicitudin elit. Sed ante orci, ornare sed tempus in, pulvinar consequat sem. Mauris in leo fringilla, elementum metus ac, tristique magna. Suspendisse potenti. Nunc vel elit vel sem posuere vestibulum in quis dolor. Phasellus ut orci sed nibh porttitor semper. Morbi lacinia lectus ac diam finibus euismod. Quisque faucibus turpis lobortis, varius diam et, malesuada mi. Nulla eu arcu vitae nisi porttitor elementum at sit amet leo. Nam quis metus erat. Curabitur posuere nisi nulla, ac mattis massa bibendum quis. Sed vel imperdiet ex, a posuere libero. Morbi eu massa consectetur, tristique dui et, scelerisque sapien.
+
+Nullam euismod feugiat velit a lobortis. Suspendisse efficitur luctus mollis. Nunc eros libero, tempor aliquam augue sit amet, tempus convallis eros. Donec et mi porta, interdum urna id, hendrerit augue. Cras accumsan, nunc non feugiat imperdiet, orci quam aliquam nunc, sed bibendum risus massa at ligula. Fusce sapien libero, rhoncus ultrices vehicula quis, varius eget quam. In luctus ex libero, vel auctor dolor pretium sit amet. Quisque quam velit, aliquam ac feugiat quis, sagittis nec risus.
+
+\section{Considerações finais}
+
+Vestibulum mi ante, suscipit scelerisque mauris et, ornare mattis velit. Curabitur sollicitudin ante nec viverra fermentum. Donec malesuada nibh sem, sit amet aliquet sem sodales id. Donec congue mollis ultrices. Cras vestibulum pharetra placerat. Nam pulvinar nunc lectus, eget maximus felis feugiat a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Cras vitae ligula nunc.
+
+In nec convallis massa, nec venenatis lorem. Donec maximus odio a neque euismod vehicula. Nullam sagittis id magna placerat auctor. Integer sed ullamcorper orci, id hendrerit tortor. Curabitur convallis consectetur lorem a dignissim. Nam vitae facilisis lorem. Aenean nibh mauris, sagittis eu gravida et, facilisis non ipsum. Nunc finibus purus eu nisl blandit, ut congue nibh accumsan. Praesent egestas mollis nibh, nec euismod tellus hendrerit non. Morbi mattis dolor neque, non sagittis dolor blandit vitae. Sed mattis sit amet augue quis viverra. Sed velit ligula, sollicitudin a nisl in, interdum consequat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quisque tempus urna vitae pellentesque vehicula. Nunc porta rutrum neque vel tincidunt. Cras vestibulum ante in interdum venenatis. Proin augue orci, ullamcorper luctus purus id, mattis dapibus tellus. Morbi auctor dictum pharetra. Curabitur consequat est ac laoreet pulvinar. Nunc sit amet felis a risus varius sollicitudin. Ut dignissim odio ex. Praesent at dapibus ipsum.
+
+  
+\section{Agradecimentos}
+
+    Este trabalho foi realizado com o suporte da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) e do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), número do processo XXX.
+
+%%% References
+
+\bibliographystyle{plain}
+\bibliography{bib/references}
+
+\end{multicols}
+
+\end{document}
