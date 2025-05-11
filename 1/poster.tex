@@ -1,6 +1,6 @@
 \documentclass[superscriptaddress,a0]{sciposter}
 \usepackage[utf8]{inputenc}
-\usepackage[provide=american]{babel}
+% \usepackage[provide=american]{babel}
 \usepackage{multicol}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
@@ -9,37 +9,33 @@
 \usepackage{booktabs}
 \usepackage{textcomp} % for registred symbol
 \usepackage[linesnumbered,algoruled,longend]{algorithm2e}
-
+% \usepackage[numbers,comma,sort&compress]{natbib}
+\usepackage[backend=bibtex,bibencoding=utf8,doi=false,isbn=false,url=false,eprint=false,indexing=false,citestyle=numeric,bibstyle=numeric]{biblatex}
 \newcommand{\midsepremove}{\aboverulesep = 0mm \belowrulesep = 0mm}
 \midsepremove
 \newcommand{\midsepdefault}{\aboverulesep = 0.605mm \belowrulesep = 0.984mm}
 \midsepdefault
 
-% titulo do trabalho
+\addbibresource{bib/refs.bib}
+
 \title{Hofstadter butterfly in transistion metal dichalcogenides}
 
-% nome dos autores
 \author{Huynh Thanh Duc$\mathbf{^1}$, Tran Khoi Nguyen$\mathbf{^2}$, Dao Duy Tung$\mathbf{^2}$ \\ 
-\small $\mathbf{^1}$ IOVASP, \\ 
+\small $\mathbf{^1}$ Viet Nam Academy of Science And Technology, \\ 
 \small $\mathbf{^1}$ Departmend of Theoretical Physics, University of Science.
 }
-% nome e endereço da Instituição
 \institute 
 {The 50th Vietnam Conference on Theoretical Physics}
-% e-mail dos autores (em ordem)
 \email{{email}{(@inpe.br)}}
 
-% exibe os logos (esquerda e direita) 
 \leftlogo[0.7]{img/Logo chinh.png}
 \rightlogo[1.0]{img/LogoVien.jpg}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Begin of Document
 
 \begin{document}
 
 
-\conference{{\bf WorCAP XXXX}, Workshop de Computação Aplicada - INPE, XXXX de Agosto de XXXX, São José dos Campos, Brasil}
+\conference{{\bf WorCAP XXXX}, The 50th Vietnam Conference on Theoretical Physics} 
 
 \maketitle
 
@@ -52,39 +48,24 @@
 
 %%% Abstract
 % \begin{abstract}
-% Abstract.
+% Abstract. absjansdjaadsnaljansdvasvasdnsdnjsdnljnsdvnsndjlnadnvdnv
 % \end{abstract}
 
 %%% Introduction
 \section{Introduction}
 
+Since the isolation of graphene in 2004, research on the field of two-dimensional (2D) materials has noticeably grown into a major branch of physical science
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum nec ante in imperdiet. Curabitur leo nisl, elementum quis auctor vitae, malesuada nec lorem. Nam quis tincidunt est, et cursus ligula. Praesent ornare, mi in accumsan dapibus, ex enim placerat metus, sed placerat nulla metus quis dui. Maecenas eu diam neque. Suspendisse eget erat lectus. Proin eros lorem, gravida at sapien ut, luctus commodo neque. Aliquam erat volutpat. Maecenas mollis varius leo non auctor. Integer commodo condimentum ante sit amet volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus tempus risus a hendrerit lacinia.
+\section{Theory}
 
-Donec bibendum ornare orci, non euismod lectus pulvinar ut. Maecenas non aliquet est. Curabitur vehicula posuere augue, at congue erat eleifend vitae. Pellentesque lobortis velit metus, dignissim aliquet ipsum fermentum ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus maximus tellus vitae gravida. Curabitur quis condimentum mauris. Suspendisse ornare consectetur massa, sed pharetra neque fermentum in. Vivamus efficitur placerat elit, quis consequat odio fermentum id. Etiam lobortis pulvinar nunc, tincidunt mollis nibh sollicitudin eget. Nunc placerat et mauris ac blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque non dictum mi. Donec eget justo mauris. Quisque eleifend nunc vel massa convallis, nec cursus risus tincidunt.
+In this section, we will use the minimal three-band tight-binding model from Ref \cite{PhysRevB.88.085433}
 
-Suspendisse non feugiat est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse mollis faucibus faucibus. Curabitur imperdiet tempus vehicula. Nunc eu sem eget metus iaculis lacinia et ut nisi. Etiam dignissim, libero laoreet tincidunt interdum, justo urna viverra dui, eu suscipit turpis orci sit amet tellus. Phasellus vehicula, magna sed vehicula laoreet, libero nisl lacinia tortor, quis feugiat magna quam quis magna. Integer a rhoncus lectus. Donec imperdiet sed sapien non sodales. Morbi fringilla massa feugiat arcu rutrum, nec tincidunt velit aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis augue ut lorem mollis finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-\section{Referencial teórico}
 
-Etiam non rutrum libero. Morbi ut fermentum massa, quis vestibulum ligula. Integer commodo neque ligula, ut vulputate sapien rhoncus sit amet. Aliquam efficitur odio velit, a lacinia urna accumsan vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent consequat dui nec quam pharetra feugiat non vel ex. Vivamus eget erat est. Ut rutrum id nisi ac posuere.
+\section{Method}
 
-Sed semper, enim in volutpat dictum, purus arcu gravida dui, sit amet cursus justo lorem sed eros. Sed hendrerit neque fringilla mattis sodales. Quisque non vestibulum erat. Ut vitae urna consectetur, tincidunt elit ut, pellentesque velit. Praesent cursus, diam vitae varius viverra, dui lacus suscipit purus, in interdum urna massa vitae ex. Proin ultricies arcu vel dolor auctor fermentum. Nunc id ultricies nulla, in rutrum justo. Vestibulum sed porttitor nisi, nec scelerisque nulla. Sed a mi finibus, fermentum arcu vel, commodo ante. In elementum at magna sit amet vehicula. Suspendisse id leo sed mi auctor consectetur. Sed sodales urna leo, at posuere ipsum lacinia id. Suspendisse lobortis tempor purus non eleifend.
 
-    Lorem Ipsum $G = (V,E)$
-    
-  \begin{equation}
-  \label{eq:lip_cc_of}
-   K_{ce}(G, \mathcal{C}) = \sum\limits_{i < j, \ (i,j) \in E} x_{ij} +
-      \sum\limits_{i < j, \ (i,j) \notin E} (1 - x_{ij}),
-  \end{equation}
-  \[
-    x_{ij} = 
-    \begin{cases}
-            0, & \text{if } \ell_C(i) \cap \ell_C(j) \neq \emptyset,\\
-            1, & \text{if } \ell_C(i) \cap \ell_C(j) = \emptyset.
-    \end{cases}
-  \]
+
 
 \section{Cumulus Nimbus}
 a
@@ -173,8 +154,7 @@ Quisque tempus urna vitae pellentesque vehicula. Nunc porta rutrum neque vel tin
 
 %%% References
 
-\bibliographystyle{plain}
-\bibliography{bib/references}
+\printbibliography
 
 \end{multicols}
 
