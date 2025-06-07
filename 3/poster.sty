@@ -1,0 +1,141 @@
+% Packages for various functionalities
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{lipsum}
+% Font As you wish
+
+\usepackage{mathptmx}
+%\usepackage{courier}
+%\usepackage[scaled]{helvet}
+
+
+% Define colors
+\definecolor{brightyellow}{RGB}{255, 204, 0}
+\definecolor{vibrantblue}{RGB}{51, 102, 204}
+\definecolor{highlightgreen}{RGB}{102, 204, 0}
+\definecolor{accentorange}{RGB}{255, 102, 0}
+\definecolor{lightgray}{RGB}{220, 220, 220}
+\definecolor{DeepRed}{RGB}{139, 0, 0}
+
+
+% Poster settings
+\setlength{\columnsep}{-0.8cm} % Column separation
+\setlength{\parskip}{5ex}
+\setlength{\parindent}{0pt}
+% \setlength{\oddsidemargin}{-1in} % Adjusted margin (left)
+% \setlength{\evensidemargin}{-5in}  % Adjusted margin (right)
+\setlength{\topmargin}{-1.5in} % Adjusted margin
+\setlength{\headsep}{0in} % Adjusted margin
+
+
+\newcommand{\coloredsection}[3]{%
+    \begin{center}
+        \begin{tcolorbox}[
+            enhanced,
+            colback=#1,
+            colframe=#1!70,
+            arc=6pt,
+            boxrule=3pt,
+            width=0.6\linewidth,
+            ]
+            \centering
+            {\fontsize{50pt}{50pt}\selectfont\textbf{#2}}\\[3ex] % Adjusted font size and vertical space
+            #3 % Content added here
+        \end{tcolorbox}
+    \end{center}
+}
+
+% Define command for colored subsection titles
+\newcommand{\coloredsubsection}[3]{%
+    \vspace{-1.2em} % Small gap between section and subsection
+    \begin{center}
+        \begin{tcolorbox}[
+            enhanced,
+            colback=#1,
+            colframe=#1!70,
+            arc=20pt,
+            boxrule=3pt,
+            width=0.98\linewidth,
+            ]
+            
+            {\fontsize{35}{35}\selectfont{#2}}\\[1ex] % Adjusted font size and vertical space
+            #3 % Content added here
+        \end{tcolorbox}
+    \end{center}
+}
+
+
+% Define a simple Box1
+\newtcolorbox{Box1}[1][]{%
+    sidebyside,
+    lower separated=false,
+    righthand ratio=0.4,
+    colback=white,
+    colframe=brightyellow,
+    enhanced,
+    sharp corners,
+    boxrule=0.5pt,
+    #1
+}
+
+% Define a simple Box3
+\newtcolorbox{Box3}[1][]{%
+    sidebyside,
+    lower separated=false,
+    righthand ratio=0.4,
+    colback=white,
+    colframe=highlightgreen,
+    enhanced,
+    sharp corners,
+    boxrule=0.5pt,
+    #1
+}
+
+% Define a simple Box5
+\newtcolorbox{Box5}[1][]{%
+    sidebyside,
+    lower separated=false,
+    righthand width=0.5\linewidth,
+    colback=white,
+    colframe=lightgray,
+    enhanced,
+    sharp corners,
+    boxrule=0.5pt,
+    #1
+}
+
+\definecolor{nottblue}{RGB}{16, 38, 59}
+% Define colorful square icon command
+\newcommand{\squareicon}[1]{\textcolor{#1}{\rule{0.7cm}{0.7cm}}}
+
+% Define star icon command with color and size
+\newcommand{\staricon}[2]{\textcolor{#1}{\fontsize{#2}{#2}\selectfont\ensuremath{\star}}}
+
+% Define colorful triangle icon command with rotation
+\newcommand{\triangleicon}[1]{\rotatebox{0}{\begin{tikzpicture}[scale=0.35]
+    \fill[#1] (0,0) -- (1,1.732) -- (2,0) -- cycle;
+\end{tikzpicture}}}
+
+
+% Define colorful circle icon command
+\newcommand{\circleicon}[1]{\begin{tikzpicture}[scale=0.4]
+    \fill[#1] (0,0) circle (1);
+\end{tikzpicture}}
